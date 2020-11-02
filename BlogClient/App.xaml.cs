@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BlogClient.Views;
+using CommonServiceLocator;
+using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +26,8 @@ namespace BlogClient
     /// </summary>
     sealed partial class App : Application
     {
+        public const string MainPage = "MainPage";
+        public const string BlogPage = "BlogPage";
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -30,6 +36,13 @@ namespace BlogClient
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+
+            var nav = new NavigationService();
+            nav.Configure(MainPage, typeof(MainPage));
+            nav.Configure(BlogPage, typeof(BlogPage));
+            SimpleIoc.Default.Register<INavigationService>(() => nav);
         }
 
         /// <summary>
