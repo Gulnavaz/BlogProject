@@ -14,7 +14,7 @@ using BlogProject.Models;
 
 namespace BlogProject.Controllers
 {
-    [Route("api/blog")]
+    [Route("api/blog/{id?}")]
     public class BlogController : ApiController
     {
         private BlogContext db = new BlogContext();
@@ -89,6 +89,7 @@ namespace BlogProject.Controllers
         }
 
         // DELETE: api/Blog/5
+        [HttpDelete]
         [ResponseType(typeof(BlogPost))]
         public async Task<IHttpActionResult> DeleteBlogPost(int id)
         {

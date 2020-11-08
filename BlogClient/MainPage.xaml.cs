@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BlogClient.ViewModels;
+using BlogClient.Service;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using BlogClient.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,9 +25,14 @@ namespace BlogClient
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public BlogPostViewModel vm { get; set; }
+        public BlogService BlogService { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
+            vm = new BlogPostViewModel();
+            
+            
         }
     }
 }

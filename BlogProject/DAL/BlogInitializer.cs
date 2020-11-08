@@ -22,7 +22,7 @@ namespace BlogProject.DAL
             new BlogPost{Title="Guardians of the Galaxy",Category="Action, Adventure, Sci-Fi", Text="A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",Datetime=DateTime.Parse("2014-11-23")},
             new BlogPost{Title="The Avengers: Age of Ultron",Category="Action, Adventure, Sci-Fi", Text="When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",Datetime=DateTime.Parse("2015-12-23")},
             new BlogPost{Title="Captain America: Civil War",Category="Action, Adventure, Sci-Fi", Text="Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.",Datetime=DateTime.Parse("2016-08-29")},
-            new BlogPost{Title="Get Out",Category=" Horror, Mystery, Thriller", Text="A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.",Datetime=DateTime.Parse("2017-01-25")}
+            new BlogPost{Title="Get Out",Category="Horror, Mystery, Thriller", Text="A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.",Datetime=DateTime.Parse("2017-01-25")}
             };
 
             blogs.ForEach(x => context.BlogPosts.Add(x));

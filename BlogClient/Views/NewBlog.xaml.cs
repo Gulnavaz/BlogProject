@@ -21,14 +21,13 @@ namespace BlogClient.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BlogPage : Page
+    public sealed partial class NewBlog : Page
     {
-        public BlogPageViewModel vm { get; set; }
-        public BlogPage()
+        public NewBlogViewModel vm { get; set; }
+        public NewBlog()
         {
-
             this.InitializeComponent();
-            vm = new BlogPageViewModel();
+            vm = new NewBlogViewModel();
         }
     }
 }

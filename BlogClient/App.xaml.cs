@@ -1,4 +1,6 @@
-﻿using BlogClient.Views;
+﻿using BlogClient.Models;
+using BlogClient.ViewModels;
+using BlogClient.Views;
 using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
@@ -28,6 +30,13 @@ namespace BlogClient
     {
         public const string MainPage = "MainPage";
         public const string BlogPage = "BlogPage";
+        public const string NewBlog = "NewBlog";
+        static BlogPost _blogpost;
+        public static BlogPost Blogpost
+        {
+            get { return _blogpost; }
+            set { _blogpost = value; }
+        }
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -42,6 +51,7 @@ namespace BlogClient
             var nav = new NavigationService();
             nav.Configure(MainPage, typeof(MainPage));
             nav.Configure(BlogPage, typeof(BlogPage));
+            nav.Configure(NewBlog, typeof(NewBlog));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
         }
 

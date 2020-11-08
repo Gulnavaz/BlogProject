@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogProject", "BlogProject\BlogProject.csproj", "{A11211CC-E29B-42CD-8223-6DC25762AB02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogClient", "BlogClient\BlogClient.csproj", "{7168213A-FC5C-40E6-A59D-1D4AE9742E2B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A11211CC-E29B-42CD-8223-6DC25762AB02} = {A11211CC-E29B-42CD-8223-6DC25762AB02}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +45,8 @@ Global
 		{A11211CC-E29B-42CD-8223-6DC25762AB02}.Release|x86.ActiveCfg = Release|Any CPU
 		{A11211CC-E29B-42CD-8223-6DC25762AB02}.Release|x86.Build.0 = Release|Any CPU
 		{7168213A-FC5C-40E6-A59D-1D4AE9742E2B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7168213A-FC5C-40E6-A59D-1D4AE9742E2B}.Debug|Any CPU.Build.0 = Debug|x86
+		{7168213A-FC5C-40E6-A59D-1D4AE9742E2B}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{7168213A-FC5C-40E6-A59D-1D4AE9742E2B}.Debug|ARM.ActiveCfg = Debug|ARM
 		{7168213A-FC5C-40E6-A59D-1D4AE9742E2B}.Debug|ARM.Build.0 = Debug|ARM
 		{7168213A-FC5C-40E6-A59D-1D4AE9742E2B}.Debug|ARM.Deploy.0 = Debug|ARM
