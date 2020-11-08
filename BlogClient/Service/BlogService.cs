@@ -13,11 +13,11 @@ namespace BlogClient.Service
     public class BlogService
     {
         static HttpClient httpClient = new HttpClient();
-        private static string GetBlogPostsurl = "https://localhost:44357";
+        private static string url = "http://localhost:44332/";
 
         public async Task<ObservableCollection<BlogPost>> GetBlogPosts()
         {
-            string getPost = await httpClient.GetStringAsync(GetBlogPostsurl);
+            string getPost = await httpClient.GetStringAsync(url + "api/blog");
             var blogs = JsonConvert.DeserializeObject<ObservableCollection<BlogPost>>(getPost);
             return blogs;
         }
